@@ -1,0 +1,119 @@
+body {
+    text-align: center;
+    padding: 30px;
+    background-color: rgb(235, 231, 216);
+
+    font-family: "Vidaloka", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+
+    font-family: "Vidaloka", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+label {
+    display: inline-block;
+    width: 80px;
+}
+
+input[type="text"] {
+    width: 120px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.color-button {
+    padding: 5px 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.check-bttn-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.check-area {
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.bttn-mention {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(139, 161, 128);
+    white-space: nowrap;
+    text-align: center;
+    padding-right: 12px;
+}    
+
+.check-bttn {
+    padding: 20px 40px;
+    background-color: #5b7855;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.options {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 10;
+    min-width: 200px;
+    white-space: nowrap;
+}
+
+.check-area:hover .options,
+.check-area:focus-within .options {
+      display: block;            /* 보여지도록 변경 */
+}
+  
+/* 선택지 스타일 */
+.option label, .option a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 5px 0;
+    cursor: pointer;
+}
+  
+.option a:hover, .option label:hover {
+    color: #80947f;
+    font-weight: bold;
+}
+  
+/* 기본적으로 메시지는 숨김 */
+.message {
+    display: none;
+    margin-top: 30px;
+    background-color: #e0ffe0;
+    color: #2a7a2a;
+    border: 1px solid #2a7a2a;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* option1이 선택된 경우 메시지 표시 */
+#option1-toggle:checked ~ .message {
+    display: block;
+}
